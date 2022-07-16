@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+{% block body %}
+<h1>Insertar sede al tercero {{id}}</h1>
+<div class="row">
+    <div class="col-md-4 offset-md-4">
+        <div class="card card-body">
+            <form action="{{url_for('add_facility')}}" method="POST">
+                <form>
+                    <div class="container">
+                        <div class="row">
+                            <center><div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="direccion-f2">ID tercero</label>
+                                    <input type="text" class="form-control" id="idt" name="idt" value="{{id}}" readonly
+                                        placeholder="{{id}}">
+                                </div>
+                            </div></center>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="r_social-f2">Nombre de la sede</label>
+                                    <input type="text" class="form-control" id="r_social-f2" name="r_social-f2"
+                                        placeholder="Surtilider">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="telefono-f2">Teléfono</label>
+                                    <input type="text" class="form-control" id="telefono-f2" name="telefono-f2"
+                                        placeholder="0000000000">
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="tercero">Estado</label>
+                                    <select class="form-select" aria-label="Default select example" name="tercero" id="tercero">
+                                      <option value="Activo" selected>Activo</option>
+                                      <option value="Inactivo">Inactivo</option>
+                                    </select>
+                                  </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="direccion-f2">Dirección</label>
+                                    <input type="text" class="form-control" id="direcccion-f2" name="direcccion-f2"
+                                        placeholder="CRA 5 # 15 - 96">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <center>
+                        <div class="form-group">
+                            <button class="btn btn-success btn-block">
+                                Guardar
+                              </button></div>
+                      </center>
+                </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
